@@ -3,7 +3,7 @@
   margin: 0;
 }
 .container {
-  margin-top: 15vh !important;
+  margin-top: 5vh !important;
   background: rgba(147, 189, 198, 0.15);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(1.5px);
@@ -30,4 +30,7 @@ body {
   /* background-position: auto auto;  */
   background-repeat: no-repeat;
   /* background-color: antiquewhite; */
+}
+a{
+  text-decoration: none;
 }
