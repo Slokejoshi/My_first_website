@@ -25,11 +25,11 @@
   border: 1px solid rgb(15, 15, 15);
 }
 body {
-  background-image: url("bg-img.jpg");
-  background-size: cover;
-  /* background-position: auto auto;  */
+  background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
+  background-position: center center;
   background-repeat: no-repeat;
-  /* background-color: antiquewhite; */
+  background-attachment: fixed;
+  background-size: cover;
 }
 a{
   text-decoration: none;
