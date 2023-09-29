@@ -17,9 +17,9 @@
     console.log("password =", orgPassword.value);
   });
 
-  if (orgPassword != cnfPassword) {
-    alert("Password and Confirm password should be same");
-  }
+  // if (orgPassword != cnfPassword) {
+  //   alert("Password and Confirm password should be same");
+  // }
 
   Array.prototype.slice.call(forms).forEach(function (form) {
     form.addEventListener(
