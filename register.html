@@ -18,18 +18,19 @@
 
     <link rel="stylesheet" href="./register.css" />
   </head>
+
   <body>
     <header>
-      <h2>Registration Form</h2>
+      <h2 class="text-center">Registration Form</h2>
     </header>
 
     <form class="needs-validation" novalidate>
-      <div class="container w-50 pb-3">
+      <div class="container w-50 pb-3 mt-5">
         <div class="row">
-          <div class="col">
+          <div class="col mt-4">
             <input
               type="text"
-              class="form-control"
+              class="font-italic form-control border-dark border-2 bg-transparent"
               id="fname"
               name="Firstname"
               placeholder="FirstName"
@@ -39,10 +40,11 @@
             <div class="invalid-feedback">Please choose a Valid Firstname.</div>
           </div>
 
-          <div class="col">
+          <div class="col mt-4">
             <input
               type="text"
-              class="form-control"
+              class="form-control border-dark border-2 bg-transparent"
+              id="lname"
               name="Lastname"
               placeholder="LastName"
               required
@@ -53,10 +55,11 @@
         </div>
 
         <div class="row">
-          <div class="col">
+          <div class="col mt-4">
             <input
               type="Email"
-              class="form-control"
+              id="email"
+              class="form-control border-dark border-2 bg-transparent "
               placeholder="Email"
               required
             />
@@ -65,12 +68,11 @@
           </div>
         </div>
 
-        <div class="row">
+        <div class="row mt-4">
           <div class="col">
             <input
               type="password"
-              x
-              class="form-control org-password"
+              class="form-control org-password  border-dark border-2 bg-transparent"
               placeholder="Password"
               required
             />
@@ -79,11 +81,11 @@
           </div>
         </div>
 
-        <div class="row">
+        <div class="row mt-4">
           <div class="col">
             <input
               type="password"
-              class="form-control cnf-password"
+              class="form-control cnf-password  border-dark border-2 bg-transparent"
               placeholder="Confirm Password"
               required
             />
@@ -96,7 +98,8 @@
         <div class="row mt-3 justify-content-center">
           <button
             type="submit"
-            class="btn btn-success w-25"
+            id="submit-btn"
+            class="btn btn-success w-25 border-dark border-1"
             onsubmit="onSubmit()"
           >
             Submit
@@ -118,39 +121,6 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
-    <script>
-      // Example starter JavaScript for disabling form submissions if there are invalid fields
-      (function onSubmit() {
-        "use strict";
-
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-
-        var forms = document.querySelectorAll(".needs-validation");
-
-        // let x = parseInt(document.querySelector(".org-password").value);
-        // let y = parseInt(document.querySelector(".cnf-password").value);
-
-        //   if(x != y){
-        //        alert("parrsdfsdklchvk");
-
-        //   }
-        // Loop over them and prevent submission
-
-        Array.prototype.slice.call(forms).forEach(function (form) {
-          form.addEventListener(
-            "submit",
-            function (event) {
-              if (!form.checkValidity()) {
-                event.preventDefault();
-                event.stopPropagation();
-              }
-
-              form.classList.add("was-validated");
-            },
-            false
-          );
-        });
-      })();
-    </script>
+      <script src="./register.js"></script>
   </body>
 </html>

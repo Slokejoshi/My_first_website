@@ -9,7 +9,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
-header > h2 {
+header > .title {
   text-align: center;
 }
 .container {
