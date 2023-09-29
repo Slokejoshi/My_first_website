@@ -1,46 +1,38 @@
-// Example starter JavaScript for disabling form submissions if there are invalid fields
 (function onSubmit() {
-    "use strict";
+  "use strict";
 
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll(".needs-validation");
+  const fName = document.getElementById("fname");
+  const lName = document.getElementById("lname");
+  const email = document.getElementById("email");
+  const orgPassword = document.querySelector(".org-password");
+  const cnfPassword = document.querySelector(".cnf-password");
+  const submit = document.getElementById("submit-btn");
 
-    var forms = document.querySelectorAll(".needs-validation");
-    const Fname = document.getElementById("fname");
-    const Lname = document.getElementById("lname");
-    const Email = document.getElementById("email");
-    let Org_password = document.querySelector(".org-password");
-    let cnf_password = document.querySelector(".cnf-password");
-    const submit = document.getElementById("submit-btn");
+  submit.addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log("Firstname =", fName.value);
+    console.log("Lastname =", lName.value);
+    console.log("Email =", email.value);
+    console.log("password =", orgPassword.value);
+  });
 
-    submit.addEventListener("click",(e)=>{
-        e.preventDefault();
-        console.log("Firstname =",Fname.value);
-        console.log("Lastname =",Lname.value);
-        console.log("Email =", Email.value);
-        console.log("password =",Org_password.value);
-    });
+  if (orgPassword != cnfPassword) {
+    alert("Password and Confirm password should be same");
+  }
 
+  Array.prototype.slice.call(forms).forEach(function (form) {
+    form.addEventListener(
+      "submit",
+      function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
 
-
-
-      if(Org_password != cnf_password){
-           alert("parrsdfsdklchvk");
-
-      }
-    // Loop over them and prevent submission
-
-    Array.prototype.slice.call(forms).forEach(function (form) {
-      form.addEventListener(
-        "submit",
-        function (event) {
-          if (!form.checkValidity()) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-
-          form.classList.add("was-validated");
-        },
-        false
-      );
-    });
-  })();
+        form.classList.add("was-validated");
+      },
+      false
+    );
+  });
+})();
