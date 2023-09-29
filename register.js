@@ -8,8 +8,8 @@
     const Fname = document.getElementById("fname");
     const Lname = document.getElementById("lname");
     const Email = document.getElementById("email");
-    let Org_password = document.querySelector(".org-password").value;
-    let cnf_password = document.querySelector(".cnf-password").value;
+    let Org_password = document.querySelector(".org-password");
+    let cnf_password = document.querySelector(".cnf-password");
     const submit = document.getElementById("submit-btn");
 
     submit.addEventListener("click",(e)=>{
