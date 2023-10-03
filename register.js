@@ -8,6 +8,18 @@
   const orgPassword = document.querySelector(".org-password");
   const cnfPassword = document.querySelector(".cnf-password");
   const submit = document.getElementById("submit-btn");
+  const TogglePassword = document.getElementById('togglePassword');
+ 
+  TogglePassword.addEventListener("click",()=>{
+    if(orgPassword.type === 'password'){
+      orgPassword.type = 'text';
+      TogglePassword.classList.toggle('fa-eye');      
+    }
+    else{
+      orgPassword.type = 'password';
+      TogglePassword.classList.toggle('fa-eye-slash fa-lg');
+    }
+  });
 
   submit.addEventListener("click", (e) => {
     e.preventDefault();
@@ -20,7 +32,6 @@
       alert("Password and Confirm password should be same");
     }
   });
-
 
   Array.prototype.slice.call(forms).forEach(function (form) {
     form.addEventListener(

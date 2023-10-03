@@ -69,13 +69,15 @@
         </div>
 
         <div class="row mt-4">
-          <div class="col">
+          <div class="col input-group">
             <input
               type="password"
-              class="form-control org-password border-dark border-2 bg-transparent"
-              placeholder="Password"
-              required
-            />
+              class="form-control org-password border-dark border-2 border-end-0 bg-transparent"
+              placeholder="Password" id="Password" required/> 
+
+              <i class="w-auto fa-regular pt-3 fa-eye-slash fa-lg input-group-text bg-transparent border-dark rounded-end border-2 border-start-0" id="togglePassword"></i>
+            
+
             <div class="valid-feedback">Looks good!</div>
             <div class="invalid-feedback">Please choose a Valid password.</div>
           </div>
@@ -123,6 +125,10 @@
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/dbd6956efe.js"
       crossorigin="anonymous"
     ></script>
     <script src="./register.js"></script>
