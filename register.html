@@ -15,7 +15,10 @@
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
-
+    <script
+    src="https://kit.fontawesome.com/dbd6956efe.js"
+    crossorigin="anonymous"
+  ></script>
     <link rel="stylesheet" href="./register.css" />
   </head>
 
@@ -69,13 +72,15 @@
         </div>
 
         <div class="row mt-4">
-          <div class="col">
+          <div class="col input-group">
             <input
               type="password"
-              class="form-control org-password border-dark border-2 bg-transparent"
-              placeholder="Password"
-              required
-            />
+              class="form-control org-password border-dark border-2 border-end-0 bg-transparent"
+              placeholder="Password" id="Password" required/> 
+
+              <i class="w-auto fa-regular pt-3 fa-eye-slash fa-lg input-group-text bg-transparent border-dark rounded-end border-2 border-start-0" id="togglePassword"></i>
+            
+
             <div class="valid-feedback">Looks good!</div>
             <div class="invalid-feedback">Please choose a Valid password.</div>
           </div>
@@ -89,6 +94,7 @@
               placeholder="Confirm Password"
               required
             />
+            
             <div class="valid-feedback">Looks good!</div>
             <p id="demo"></p>
             <div class="confirm-passwrd"></div>
@@ -125,6 +131,7 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
+   
     <script src="./register.js"></script>
   </body>
 </html>
