@@ -9,16 +9,11 @@
   const cnfPassword = document.querySelector(".cnf-password");
   const submit = document.getElementById("submit-btn");
   const TogglePassword = document.getElementById('togglePassword');
- 
+
   TogglePassword.addEventListener("click",()=>{
-    if(orgPassword.type === 'password'){
-      orgPassword.type = 'text';
-      TogglePassword.classList.toggle('fa-eye');      
-    }
-    else{
-      orgPassword.type = 'password';
-      TogglePassword.classList.toggle('fa-eye-slash fa-lg');
-    }
+   const type = orgPassword.getAttribute('type') === 'password' ? 'text' : 'password';
+   orgPassword.setAttribute('type',type);
+   TogglePassword.classList.toggle('fa-eye');
   });
 
   submit.addEventListener("click", (e) => {
